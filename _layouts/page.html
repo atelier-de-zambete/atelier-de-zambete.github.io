@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="fullscreen hide">
+  <img src="{{ page.imgs[0] }}"/>
+  <a class="controls" id="prev-gallery" onclick="navigate(-1)"> <span><</span> </a>
+  <a class="controls" id="next-gallery" onclick="navigate(1)" > <span>></span> </a>
+  <a class="controls" id="exit-gallery" onclick="exitscreen()"> <span>x</span> </a>
+  <p class="watermark">© Corina Listaru</p>
+</div>
+
+<div class="container blue-bg">
+  <div class="row">&nbsp;</div>
+
+  <div class="row text-center">
+      <h1 class="gold"><i>{{ page.title }}</i></h1>
+      <h3>{{ page.subtitle }}</h3>
+  </div>
+</div>
+
+{%- if page.description -%}
+<div class="container">
+  <div class="row">
+    <p class="text-justify">
+    {{ page.description }}
+    </p>
+  </div>
+</div>
+{%- endif -%}
+
+{{ content }}
+
+

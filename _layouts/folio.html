@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<div class="fullscreen hide">
+  <img src="{{ page.imgs[0] }}"/>
+  <a class="controls" id="prev-gallery" onclick="navigate(-1)"> <span><</span> </a>
+  <a class="controls" id="next-gallery" onclick="navigate(1)" > <span>></span> </a>
+  <a class="controls" id="exit-gallery" onclick="exitscreen()"> <span>x</span> </a>
+  <p class="watermark">© Corina Listaru</p>
+</div>
+
+<div class="container blue-bg">
+  <div class="row">&nbsp;</div>
+
+  <div class="row text-center">
+      <h1 class="page-title"><i>Studiu de caz</i></h1>
+      <h3>
+      Categorii: 
+      {% for cat in page.categories %}
+         {% assign cat_name = cat | first %}
+         {% if cat_name %}
+           {% assign cat_url = cat_name | slugify %}
+           {{ cat_name }},
+         {% endif %}
+      {% endfor %}
+      portofoliu
+      </h3>
+  </div>
+</div>
+
+<div class="container folio">
+  <div class="row">
+    <div class="col-1-of-2 gallery">
+      {%- if page.before-img -%}
+      <div class="before-after">
+        <a onclick="fullscreen(0)">
+        <img src="{{ page.before-img }}" alt="Inainte">
+        </a>
+        <a onclick="fullscreen(1)">
+        <img src="{{ page.after-img }}" alt="Dupa">
+        </a>
+      </div>
+      {%- elsif page.vid -%}
+      <p>&nbsp;</p>
+      <video controls preload="none" poster="{{ page.vid.img }}" width="100%">
+        <source src="{{ page.vid.vid }}" type="video/mp4">
+      </video>
+      {%- else -%}
+      <a onclick="fullscreen(0)">
+        <img src="{{ page.img }}">
+      </a>
+      {%- endif -%}
+    </div>
+
+    <div class="col-1-of-2 content">
+      <div class="row">
+        <p>&nbsp;</p>
+
+        <h2 class="text-center"> {{ page.description }}</h2>
+
+        <p>&nbsp;</p>
+
+        {{ content }}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% assign img_count = page.imgs | size %}
+{% assign divisible_by_2 = img_count | modulo: 2 %}
+
+<div class="container">
+  <div class="row gallery">
+
+  {% if img_count == 1 %}
+    <div class="row">
+      <img src="{{ page.imgs | first }}" alt="" class="center" width="100%"/> 
+    </div>
+  {% elsif divisible_by_2 == 0 %}
+    {% for image in page.imgs %}
+      <div class="col-1-of-2">
+        <a onclick="fullscreen({{ forloop.index0 }})">
+          <img src="{{ image }}" alt="{{ forloop.index }}" />
+        </a>
+      </div>
+    {% endfor %}
+  {% elsif img_count == 3 %}
+    {% for image in page.imgs %}
+      <div class="col-1-of-3">
+        <a onclick="fullscreen({{ forloop.index0 }})">
+          <img src="{{ image }}" alt="{{ forloop.index }}" />
+        </a>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    {% for vid in page.vids %}
+      <video controls preload="none" poster="{{ vid.img }}" width="100%">
+        <source src="{{ vid.video }}" type="video/mp4">
+      </video>
+    {% endfor %}
+  </div>
+</div>
+

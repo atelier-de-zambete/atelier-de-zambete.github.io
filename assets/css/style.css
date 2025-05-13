@@ -1,0 +1,405 @@
+/* Fonts
+ * ----------------------------------------------
+ */
+@import url('https://fonts.googleapis.com/css?family=Playfair:100,400,400i,600,600i&text=aăâîțșbcdefghijklmnopqrstuvwxyzAĂÂÎȚȘBCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-~.%21%3F%22%27%2C%2B%3D%26%23%40%25%2A%28%29%C2%A9%2F%5B%5D');
+@import url('https://fonts.googleapis.com/css?family=Sen:400&text=aăâîțșbcdefghijklmnopqrstuvwxyzAĂÂÎȚȘBCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-~.%21%3F%22%27%2C%2B%3D%26%23%40%25%2A%28%29%C2%A9%2F%5B%5D');
+@import url('https://fonts.googleapis.com/css?family=Questrial:400,400i&text=ăâîțșĂÂÎȚȘ');
+@font-face {
+  font-family: "Neutra";
+  src:
+    url("/assets/fonts/NeutraText-Book.otf") format("opentype"),
+    url("/assets/fonts/NeutraText-Book.woff") format("woff");
+}
+@font-face {
+  font-family: "NeutraSC";
+  src:
+    url("/assets/fonts/NeutraText-BookSC.otf") format("opentype"),
+    url("/assets/fonts/NeutraText-BookSC.woff") format("woff");
+}
+
+p, ul, li, ol, td, footer p {
+  font-family: "Sen";
+  font-weight: normal;
+  font-size: 21px;
+  letter-spacing: 0.1px;
+  line-height: 30px;
+}
+
+h1, h1 a, h2, h2 a {
+  font-family: 'Playfair';
+  text-decoration: none;
+  display: block;
+}
+h1, h1 a {
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  margin-bottom: 0;
+}
+h2, h2 a {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 2.35rem;
+  letter-spacing: -1px;
+  margin-bottom: 5px;
+}
+h3, h3 a, h4, h4 a, h5, h5 a  {
+  font-family: 'NeutraSC', "Questrial";
+  letter-spacing: 1.5px;
+  font-variant: small-caps;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+h3, h3 a {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin-top: 2px;
+}
+h4, h4 a {
+  font-size: 1.2rem;
+}
+
+.highlight, p i, p a, td a {
+  font-style: italic;
+  font-family: Playfair;
+  letter-spacing: 0;
+  font-size: 27px;
+  line-height: 30px;
+}
+
+a, .menu a, footer a {
+  cursor: pointer;
+}
+.menu a, .menu li,
+footer a, footer li {
+  text-decoration: none;
+}
+
+footer li, footer a {
+  font-family: "Sen";
+  font-size: 18px;
+}
+footer a:hover, .menu a:hover  {
+  text-decoration: underline;
+}
+
+
+/* Colours
+ * ----------------------------------------------
+ * egyptian blue #213BA3
+ * royal blue #003fb3
+ * light gold #EDC458
+ * dark gold  #D6AE29
+ *
+ */
+body {
+  background: #F2F2F0;
+  color: #030309;
+}
+
+footer a {
+  color: #f2f2f0;
+}
+
+.gold-bg { 
+  background-color: #D6AE29;
+}
+.dark-blue-bg {
+  background-color: #0B1466;
+  color:#fff;
+}
+
+.blue-bg {
+  background-color: #213ba3;
+  color:#fff;
+}
+.blue-bg a, .blue-bg p, .blue-bg h2, .blue-bg h3, .blue-bg h4, .blue-bg h5, .blue-bg h6, .blue-bg li {
+  color: #fff;
+}
+
+.grey-bg {
+  background-color: #f4f4f7;
+}
+
+.highlight, p i, p a, td a {
+  color: #003fb3;
+}
+
+
+.gold {
+  color: #D6AE29;
+  /*filter: drop-shadow(-1px -1px 0px #c69e19);*/
+}
+.blue {
+  color: #213BA3;
+  /*filter: drop-shadow(-1px -1px 0px #003fb3);*/
+}
+.black {
+  color: #121319;
+}
+
+/* Header
+ * ----------------------------------------------
+ */
+#header {
+  display: block;
+  height: 80px;
+}
+
+#header .row {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.logo h1, .logo h2 {
+  margin: 2px;
+}
+.logo h1 a a, .logo h1 a:link, .logo h1 a:visited {
+  font-family: 'Playfair';
+  font-style: italic;
+  line-height: 54px;
+  font-weight: 400;
+  font-size: 38px;
+  text-decoration: none;
+  color: #504b3a;
+}
+.logo h2, .logo h2 a, .logo h2 a:link, .logo h2 a:visited {
+  font-family: "NeutraSC", "Questrial";
+  font-variant: small-caps;
+  letter-spacing: 2.5px;
+  font-size: 22px !important;
+  text-decoration: none;
+  font-weight: 400;
+  display: block;
+  font-style: normal;
+  line-height: 0;
+}
+
+
+/* Menu 
+ * ----------------------------------------------
+ */
+.menu {
+  margin: 0 !important;
+}
+.menu ul li {
+  min-width: 90px;
+  text-align: center;
+}
+.menu > li, .menu > li > a  {
+  font-weight: 400;
+  color: black !important;
+}
+
+#main-menu a {
+  letter-spacing: 1.5px;
+  font-family: "NeutraSC", "Questrial";
+}
+
+
+#main-menu-mobile {
+  background-color: rgba(255,255,255,0.7);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  z-index: 100;
+}
+#main-menu-mobile div {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vh;
+}
+#main-menu-mobile a {
+  display: block;
+  font-size: 40px;
+  font-weight: 800;
+  padding: 8px 0;
+  width: 99vw;
+  text-decoration: none;
+  color: #213BA3;
+}
+#main-menu-mobile a:hover {
+  text-transform: uppercase;
+}
+
+
+/* footer 
+ * ----------------------------------------------
+ */
+footer img {
+  max-width: 150px;
+  margin-top: 10px;
+}
+footer svg {
+  height: 16px;
+  width: 16px;
+  padding: 4px;
+  fill: #EDC458;
+}
+footer svg:hover {
+  fill: #D6AE29;
+}
+
+.social-media-list li {
+  display: inline-block;
+}
+.social-media-list li a span {
+  display:none;
+} 
+.social-media-list li::marker, footer li::marker {
+  display: none;
+}
+
+
+/* homepage
+ * ----------------------------------------------
+ */
+.slide {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1.5s ease-in-out;
+}
+.slider {
+  position: relative;
+}
+.slider .slide-img {
+  width: 100vw;
+}
+.slider .slide-img {
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: auto 100%;
+}
+
+#slider-top #slide-1 .slide-img { background-image: url(../img/poza-homepage1.jpeg); }
+#slider-top #slide-2 .slide-img { background-image: url(../img/poza-homepage2.jpeg); }
+#slider-top #slide-3 .slide-img { background-image: url(../img/poza-homepage3.jpeg); }
+#slider-top #slide-4 .slide-img { background-image: url(../img/poza-homepage4.jpeg); }
+
+@media (min-width: 1400px) {
+  .slider, .slide-img {
+    width: 1400px;
+    height: 934px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1399px) {
+  .slider, .slide-img {
+    height: calc(100vw / 3 * 2);
+    width: 100vw;
+  }
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+  padding: 25px;
+  filter: drop-shadow(1px 1px 0px white);
+}
+
+
+/* locations
+ * ----------------------------------------------
+ */
+.map {
+  border:0;
+  width: 100%;
+  height: 400px;
+}
+
+/* services
+ * ----------------------------------------------
+ */
+
+.folio-list a {
+  text-decoration: none;
+}
+
+.folio-list a h2 { 
+  font-size: 28px;
+  color: #213ba3;
+}
+.folio-list a h3 { 
+  color: #030309;
+}
+
+.folio-list img.rounded-corners {
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* contact
+ * ----------------------------------------------
+ */
+form {
+  margin-bottom: 100px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="phone"],
+form textarea {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 8px;
+  padding-left: 5px;
+}
+
+form input, form textarea, form div label {
+  line-height: 32px;
+  font-family: 'Libre Bodoni', 'Bodoni';
+  font-size: 16px !important;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+
+/*
+ * Buttons
+ * ----------------------------------------------
+ */
+input[type="submit"], button, a.button, input.button {
+  cursor: pointer;
+  display: block;
+  width: 300px;
+  margin: 30px auto 70px auto;
+  min-height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 23px !important;
+  text-decoration: none;
+  font-family: "NeutraSC", "Questrial";
+  font-variant: small-caps;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: 1.5px;
+  box-shadow: none;
+  border: 0;
+}
+
+a.button-lg, input.button-lg {
+  max-width: 400px;
+  width: 100%;
+}
+
+input[type="submit"]:hover, button:hover, a.button:hover, input.button:hover {
+  background-color: #0B1466 !important;
+}
+

@@ -1,0 +1,52 @@
+<head>
+  <title>{{ page.title }} - Corina Listaru - Atelier de Zâmbete</title>
+
+  <link rel="canonical"  href="https://corinalistaru.ro">
+  <link rel="icon"       type="image/png" href="/assets/img/logo.png">
+  <link rel="stylesheet" type="text/css"  href="/assets/css/style.css">
+  <link rel="stylesheet" type="text/css"  href="/assets/css/layout.css">
+  <link rel="stylesheet" type="text/css"  href="/assets/css/fullscreen.css">
+
+  <meta name="language" content="ro-RO" />
+  <meta name="description" content="{{ page.description }}" />
+
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="rating" content="General" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="keywords" content="tehnica dentara, stomatologie, tehnician dentar, atelier de zambete, tehnician dentar constanta, tehnica dentara constanta, fatete dentare, fatete dentare constanta, lucrari pe implanturi, lucrari pe implanturi constanta" />
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "LocalBusiness",
+    "name" : "CORINA LISTARU - ATELIER DE ZÂMBETE",
+    "photo" : {
+        "@type": "ImageObject",
+        "url": "https://corinalistaru.ro/assets/img/corina.png",
+        "name": "Corina Listaru"
+    },
+    "image" : {% if page.img %} "https://corinalistaru.ro/{{ page.img }}" {% else %} "https://corinalistaru.ro/assets/img/dent.jpg" {% endif %},
+    "telephone" : "+40 (0)722 531 932",
+    "email" : "corinalistaru71@gmail.com",
+    "address" : [
+      {
+        "@type" : "PostalAddress",
+        "addressLocality" : "Constanta",
+        "postalCode": "900647",
+        "streetAddress": "Bd. Tomis 153",
+      },
+    ],
+    "areaServed": [
+      {
+        "@type" : "PostalAddress",
+        "addressLocality" : "Constanta",
+      },
+    ],
+    "description": "{{ page.title }} - {{ page.description }}"
+  }
+  </script>
+
+</head>
